@@ -1,0 +1,58 @@
+@startuml
+class arcgis.geoprocessing._types.DataFile {
+  url: None
+  item_id: None
+  portal_item: None
+}
+class arcgis.geoprocessing._job.GPJob {
+  _future: None
+  _start_time: None
+  _gptool: None
+  _jobid: None
+  _url: None
+  _gis: None
+  _cancelled: None
+}
+class arcgis.geoprocessing._types.LinearUnit {
+  distance: None
+  units: None
+  units: None
+}
+class arcgis.geoprocessing._job.RAJob {
+  _gpjob: GPJob
+  _item: None
+}
+class arcgis.geoprocessing._types.RasterData {
+  url: None
+  format: None
+  item_id: None
+}
+class arcgis.geoprocessing._service.GPInfo {
+  _url: str
+  _gis: GIS
+}
+class arcgis.geoprocessing._service.GPService {
+  _url: str
+  _gis: None
+}
+class arcgis.geoprocessing._service.GPTask {
+  _parent: None
+  _url: str
+  _gis: None
+  _return_values: None
+  _default_db: None
+  _param_db: None
+}
+class arcgis.geoprocessing._tool.Toolbox {
+  service: None
+  _taskurls: None
+  _param_names: None
+  _method_params: None
+  _return_values: None
+}
+class arcgis.geoprocessing._tool._AsyncResource {
+}
+arcgis.geoprocessing._job.RAJob *-- arcgis.geoprocessing._job.GPJob
+arcgis.geoprocessing._job.GPJob <|-- arcgis.geoprocessing._job.RAJob
+arcgis.geoprocessing._tool._AsyncResource <|-- arcgis.geoprocessing._tool.Toolbox
+@enduml

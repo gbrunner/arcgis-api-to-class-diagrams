@@ -1,0 +1,178 @@
+@startuml
+class arcgis.auth._auth._apikey.EsriAPIKeyAuth {
+  _no_go_token: None
+  api_key: str
+  verify_cert: bool
+  auth: AuthBase
+  referer: None
+  referer: str
+}
+class arcgis.auth._auth._schain.SupportMultiAuth {
+}
+class arcgis.auth._auth._base.BaseEsriAuth {
+}
+class arcgis.auth._auth._basic.DigestAuth {
+}
+class arcgis.auth._auth._basic.EsriBasicAuth {
+  username: str
+  password: str
+  _server_log: None
+  _tokens: None
+  referer: None
+  verify_cert: bool
+  _session: None
+  _proxies: None
+}
+class arcgis.auth.tools._lazy.LazyLoader {
+  _module_name: None
+  _mod: None
+}
+class arcgis.auth._auth._basic.ProxyAuth {
+}
+class arcgis.auth._auth._notebook.EsriNotebookAuth {
+  _token: str
+  auth: AuthBase
+  referer: None
+  referer: str
+  _no_go_token: None
+  verify_cert: None
+}
+class arcgis.auth._auth._oauth.EsriOAuth2Auth {
+  _invalid_token_urls: None
+  baseurl: str
+  _client_id: str
+  _client_secret: str
+  legacy: None
+  _username: str
+  _password: None
+  _session: None
+  _session: None
+  _proxies: dict
+  _proxies: dict
+}
+class arcgis.auth._auth._pki.EsriPKIAuth {
+  _server_log: None
+  _server_log_time: None
+  _tokens: None
+  _token_url: None
+  verify_cert: bool
+  cert: Tuple[str]
+  auth: None
+  referer: None
+  referer: str
+  _session: None
+  _proxies: None
+}
+class arcgis.auth._auth._provided_token.EsriUserTokenAuth {
+  token: str
+  verify_cert: bool
+  referer: None
+  referer: str
+  legacy: None
+}
+class arcgis.auth._auth._schain._MultiAuth {
+  authentication_modes: None
+}
+class arcgis.auth._error.error.ArcGISLoginError {
+  message: None
+}
+class arcgis.auth._auth._token.ArcGISProAuth {
+  _arcpy: None
+  legacy: bool
+  _invalid_token_urls: None
+  _401_counters: None
+}
+class arcgis.auth._auth._token.EsriBuiltInAuth {
+  _expiration: None
+  _response_type: None
+  _client: None
+  _referer: None
+  legacy: bool
+  _verify_cert: bool
+  proxies: None
+  _base_url: None
+  _auth_url: None
+  _token_url: None
+  _signin_url: None
+  _reset_password_url: None
+  _update_profile_url: None
+  _clientid: None
+  _clientid: None
+  _no_go_token: None
+  _username: str
+  _password: str
+  _referer: None
+  _re_expressions: None
+  _params: None
+  _auto_refresh_extra_params: None
+}
+class arcgis.auth._auth._token.EsriGenTokenAuth {
+  proxies: None
+  _anon_urls: None
+  _legacy_auth: bool
+  _portal_auth: None
+  _session: None
+  verify_cert: bool
+  _thread_local: None
+  _expires_on: None
+  _token_url: None
+  username: str
+  password: str
+  referer: None
+  referer: str
+  _time_out: None
+  _time_out: int
+}
+class arcgis.auth._auth._winauth.EsriKerberosAuth {
+  proxies: None
+  legacy: None
+  _server_log: None
+  _tokens: None
+  _token_url: None
+  verify_cert: bool
+  referer: None
+  referer: str
+  auth: None
+}
+class arcgis.auth._auth._winauth.EsriWindowsAuth {
+  legacy: None
+  proxies: None
+  _server_log: None
+  _tokens: None
+  _token_url: None
+  verify_cert: bool
+  referer: None
+  referer: str
+  auth: None
+  auth: None
+  auth: None
+  auth: None
+}
+class arcgis.auth.api.EsriSession {
+  _session: None
+  _prevent_keep_alive: None
+  _cert: Tuple[str]
+  allow_redirects: bool
+  verify_cert: bool
+  _useragent: None
+  _referer: None
+  auth: None
+  auth: None
+  auth: None
+  auth: None
+  proxies: None
+}
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._apikey.EsriAPIKeyAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._basic.DigestAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._basic.EsriBasicAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._basic.ProxyAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._notebook.EsriNotebookAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._oauth.EsriOAuth2Auth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._pki.EsriPKIAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._provided_token.EsriUserTokenAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._token.ArcGISProAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._token.EsriBuiltInAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._token.EsriGenTokenAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._winauth.EsriKerberosAuth
+arcgis.auth._auth._schain.SupportMultiAuth <|-- arcgis.auth._auth._winauth.EsriWindowsAuth
+@enduml

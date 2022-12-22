@@ -1,0 +1,107 @@
+@startuml
+class arcgis.geometry._types.BaseGeometry {
+}
+class arcgis.geometry._types.Envelope {
+}
+class arcgis.geometry._types.Geometry {
+}
+class arcgis.geometry._types.GeometryFactory {
+}
+class arcgis.geometry._types.MultiPoint {
+}
+class arcgis.geometry._types.Point {
+}
+class arcgis.geometry._types.Polygon {
+}
+class arcgis.geometry._types.Polyline {
+}
+class arcgis.geometry._types.SpatialReference {
+}
+enum arcgis.geometry.functions.AreaUnits {
+  UNKNOWNAREAUNITS: {'areaUnit': 'esriUnknownAreaUnits'} {static}
+  SQUAREINCHES: {'areaUnit': 'esriSquareInches'} {static}
+  SQUAREFEET: {'areaUnit': 'esriSquareFeet'} {static}
+  SQUAREYARDS: {'areaUnit': 'esriSquareYards'} {static}
+  ACRES: {'areaUnit': 'esriAcres'} {static}
+  SQUAREMILES: {'areaUnit': 'esriSquareMiles'} {static}
+  SQUAREMILLIMETERS: {'areaUnit': 'esriSquareMillimeters'} {static}
+  SQUARECENTIMETERS: {'areaUnit': 'esriSquareCentimeters'} {static}
+  SQUAREDECIMETERS: {'areaUnit': 'esriSquareDecimeters'} {static}
+  SQUAREMETERS: {'areaUnit': 'esriSquareMeters'} {static}
+  ARES: {'areaUnit': 'esriAres'} {static}
+  HECTARES: {'areaUnit': 'esriHectares'} {static}
+  SQUAREKILOMETERS: {'areaUnit': 'esriSquareKilometers'} {static}
+}
+enum arcgis.geometry.functions.LengthUnits {
+  BRITISH1936FOOT: 9095 {static}
+  GOLDCOASTFOOT: 9094 {static}
+  INTERNATIONALCHAIN: 9097 {static}
+  INTERNATIONALLINK: 9098 {static}
+  INTERNATIONALYARD: 9096 {static}
+  STATUTEMILE: 9093 {static}
+  SURVEYYARD: 109002 {static}
+  FIFTYKMLENGTH: 109030 {static}
+  ONEFIFTYKMLENGTH: 109031 {static}
+  DECIMETER: 109005 {static}
+  CENTIMETER: 1033 {static}
+  MILLIMETER: 1025 {static}
+  INTERNATIONALINCH: 109008 {static}
+  USSURVEYINCH: 109009 {static}
+  INTERNATIONALROD: 109010 {static}
+  USSURVEYROD: 109011 {static}
+  USNAUTICALMILE: 109012 {static}
+  UKNAUTICALMILE: 109013 {static}
+  METER: 9001 {static}
+  GERMANMETER: 9031 {static}
+  FOOT: 9002 {static}
+  SURVEYFOOT: 9003 {static}
+  CLARKEFOOT: 9005 {static}
+  FATHOM: 9014 {static}
+  NAUTICALMILE: 9030 {static}
+  SURVEYCHAIN: 9033 {static}
+  SURVEYLINK: 9034 {static}
+  SURVEYMILE: 9035 {static}
+  KILOMETER: 9036 {static}
+  CLARKEYARD: 9037 {static}
+  CLARKECHAIN: 9038 {static}
+  CLARKELINK: 9039 {static}
+  SEARSYARD: 9040 {static}
+  SEARSFOOT: 9041 {static}
+  SEARSCHAIN: 9042 {static}
+  SEARSLINK: 9043 {static}
+  BENOIT1895A_YARD: 9050 {static}
+  BENOIT1895A_FOOT: 9051 {static}
+  BENOIT1895A_CHAIN: 9052 {static}
+  BENOIT1895A_LINK: 9053 {static}
+  BENOIT1895B_YARD: 9060 {static}
+  BENOIT1895B_FOOT: 9061 {static}
+  BENOIT1895B_CHAIN: 9062 {static}
+  BENOIT1895B_LINK: 9063 {static}
+  INDIANFOOT: 9080 {static}
+  INDIAN1937FOOT: 9081 {static}
+  INDIAN1962FOOT: 9082 {static}
+  INDIAN1975FOOT: 9083 {static}
+  INDIANYARD: 9084 {static}
+  INDIAN1937YARD: 9085 {static}
+  INDIAN1962YARD: 9086 {static}
+  INDIAN1975YARD: 9087 {static}
+  FOOT1865: 9070 {static}
+  RADIAN: 9101 {static}
+  DEGREE: 9102 {static}
+  ARCMINUTE: 9103 {static}
+  ARCSECOND: 9104 {static}
+  GRAD: 9105 {static}
+  GON: 9106 {static}
+  MICRORADIAN: 9109 {static}
+  ARCMINUTECENTESIMAL: 9112 {static}
+  ARCSECONDCENTESIMAL: 9113 {static}
+  MIL6400: 9114 {static}
+}
+arcgis.geometry._types.Geometry <|-- arcgis.geometry._types.Envelope
+arcgis.geometry._types.BaseGeometry <|-- arcgis.geometry._types.Geometry
+arcgis.geometry._types.Geometry <|-- arcgis.geometry._types.MultiPoint
+arcgis.geometry._types.Geometry <|-- arcgis.geometry._types.Point
+arcgis.geometry._types.Geometry <|-- arcgis.geometry._types.Polygon
+arcgis.geometry._types.Geometry <|-- arcgis.geometry._types.Polyline
+arcgis.geometry._types.BaseGeometry <|-- arcgis.geometry._types.SpatialReference
+@enduml

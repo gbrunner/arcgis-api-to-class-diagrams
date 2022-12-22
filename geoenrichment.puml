@@ -1,0 +1,59 @@
+@startuml
+class arcgis.geoenrichment._business_analyst._main.AOI {
+  _ba: None
+  _ba: None
+  source: None
+  properties: namedtuple
+}
+class arcgis.geoenrichment._business_analyst._main.BusinessAnalyst {
+  source: Optional[Union[str, GIS]]
+}
+class arcgis.geoenrichment._business_analyst._main.Country {
+  iso3: None
+  properties: None
+}
+class arcgis.geoenrichment._business_analyst._utils.RunThread {
+  func: None
+  args: None
+  kwargs: None
+  result: None
+}
+class arcgis.geoenrichment._ge._GeoEnrichment {
+  _gis: None
+  _portal: None
+  _base_url: None
+  _base_url: None
+  _base_url: None
+  _base_url: Optional[str]
+  _appID: None
+  _appID: str
+  _appID: None
+  _appID: None
+  _langCode: Optional[str]
+}
+class arcgis.geoenrichment.enrichment.BufferStudyArea {
+  area: Any
+  radii: Any
+  units: Any
+  overlap: Any
+  travel_mode: Any
+}
+class arcgis.geoenrichment.enrichment.Country {
+  _gis: None
+  _ba_cntry: None
+  _base_url: None
+  _base_url: None
+  _base_url: None
+  _dataset_id: None
+}
+class arcgis.geoenrichment.enrichment.NamedArea {
+  _gis: None
+  _country: None
+  _currlvl: None
+  _areaid: None
+  geometry: None
+  _name: None
+  _level_mappings: None
+}
+arcgis.geoenrichment._business_analyst._main.AOI <|-- arcgis.geoenrichment._business_analyst._main.Country
+@enduml

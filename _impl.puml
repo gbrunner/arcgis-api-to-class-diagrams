@@ -1,0 +1,341 @@
+@startuml
+class arcgis._impl._async.jobs.GeometryJob {
+  _start_time: None
+  _task_name: str
+  _future: Future
+  _wkid: int
+  _end_time: None
+  _url: str
+  _jobid: None
+  _jobid: str
+}
+class arcgis._impl._async.jobs.ItemStatusJob {
+  _start_time: None
+  _task_name: None
+  _future: None
+  _end_time: None
+  _url: None
+  _jobid: None
+  _jobid: None
+}
+class arcgis._impl._async.jobs.Job {
+  _start_time: None
+  _task_name: None
+  _future: None
+  _end_time: None
+  _url: None
+  _jobid: None
+  _jobid: None
+}
+class arcgis._impl.comments.Comment {
+  _url: None
+  _gis: None
+  _portal: None
+  _con: None
+  _gis: None
+  _con: None
+  _hydrated: None
+  _hydrated: None
+}
+class arcgis._impl.common._clone.CloneNode {
+  _parents: None
+  _children: None
+  target: None
+  _resolved: None
+  _clone_mapping: None
+  _search_existing: None
+  _temp_dir: None
+}
+class arcgis._impl.common._clone._ApplicationDefinition {
+  _preserve_item_id: None
+  _source_app_title: None
+  _update_url: None
+}
+class arcgis._impl.common._clone._DashboardDefinition {
+}
+class arcgis._impl.common._clone._DeepCloner {
+  _preserve_item_id: None
+  _graph: None
+  folder: None
+  owner: None
+  _logger: None
+  target: None
+  _items: None
+  _item_extent: None
+  _service_extent: None
+  _use_org_basemap: None
+  _copy_data: None
+  _copy_global_ids: None
+  _search_existing_items: None
+  _clone_mapping: None
+  _temp_dir: None
+  _cloned_items: None
+}
+class arcgis._impl.common._clone._ExcelHelper {
+  folder: None
+  field_mapping: dict
+}
+class arcgis._impl.common._clone._FeatureCollectionDefinition {
+  copy_data: None
+  _preserve_item_id: None
+}
+class arcgis._impl.common._clone._FeatureServiceDefinition {
+  _service_definition: None
+  _service_extent: None
+  _layers_definition: None
+  _features: None
+  _is_view: None
+  _view_sources: None
+  _view_source_fields: None
+  copy_data: None
+  _copy_global_ids: None
+  _logger: None
+  _preserve_item_id: None
+  _logger: None
+}
+class arcgis._impl.common._clone._FeatureServiceRefDef {
+  _preserve_item_id: None
+  _service_definition: None
+  _service_extent: None
+  _layers_definition: None
+  _features: None
+  _is_view: None
+  _view_sources: None
+  _view_source_fields: None
+  copy_data: None
+  _copy_global_ids: None
+}
+class arcgis._impl.common._clone._FormDefinition {
+  _preserve_item_id: None
+  _related_items: None
+}
+class arcgis._impl.common._clone._GroupDefinition {
+  info: None
+  thumbnail: None
+  portal_group: None
+  created_items: None
+  owner: None
+}
+class arcgis._impl.common._clone._ItemCreateException {
+}
+class arcgis._impl.common._clone._ItemDefinition {
+  info: None
+  _preserve_item_id: None
+  _data: None
+  sharing: None
+  sharing: None
+  thumbnail: None
+  _item_property_names: None
+  portal_item: None
+  folder: None
+  owner: None
+  item_extent: None
+  created_items: None
+}
+class arcgis._impl.common._clone._NotebookDefinition {
+  _preserve_item_id: None
+  _source_url: None
+}
+class arcgis._impl.common._clone._OperationViewDefintion {
+}
+class arcgis._impl.common._clone._ProMapDefinition {
+}
+class arcgis._impl.common._clone._ProProjectPackageDefinition {
+}
+class arcgis._impl.common._clone._QuickCaptureDefinition {
+  _preserve_item_id: None
+}
+class arcgis._impl.common._clone._TextItemDefinition {
+}
+class arcgis._impl.common._clone._WebMapDefinition {
+  _preserve_item_id: None
+  use_org_basemap: None
+}
+class arcgis._impl.common._clone._WorkforceProjectDefinition {
+}
+class arcgis._impl.common._deprecate.DeprecatedWarning {
+  function: None
+  deprecated_in: None
+  removed_in: None
+  details: None
+}
+class arcgis._impl.common._deprecate.UnsupportedWarning {
+}
+class arcgis._impl.common._filters.GeometryFilter {
+  geometry: None
+  _spatialAction: None
+  _spatialReference: None
+  _buffer: None
+  _units: None
+}
+class arcgis._impl.common._filters.LayerDefinitionFilter {
+}
+class arcgis._impl.common._filters.StatisticFilter {
+}
+class arcgis._impl.common._filters.TimeFilter {
+  _startTime: None
+  _endTime: None
+  _tz: None
+}
+class arcgis._impl.common._isd.InsensitiveDict {
+  _store: None
+}
+class arcgis._impl.common._itemdef._expbuilder._WebExperience {
+  info: None
+  _preserve_item_id: None
+  _data: None
+  sharing: None
+  sharing: None
+  thumbnail: None
+  _item_property_names: None
+  portal_item: None
+  folder: None
+  owner: None
+  item_extent: None
+  created_items: None
+}
+class arcgis._impl.common._itemdef._storymaps._StoryMapDefinition {
+  _preserve_item_id: None
+  info: None
+  _data: None
+  resolved: None
+  sharing: None
+  sharing: None
+  thumbnail: None
+  _item_property_names: None
+  portal_item: None
+  folder: None
+  owner: None
+  item_extent: None
+  created_items: None
+  resources: None
+  _clone_mapping: None
+  clone_mapping: None
+}
+class arcgis._impl.common._itemdef._ts._TileItemDefinition {
+}
+abstract class arcgis._impl.common._mixins.Attr {
+}
+class arcgis._impl.common._mixins.AttrDict {
+}
+class arcgis._impl.common._mixins.AttrOrderedDict {
+}
+abstract class arcgis._impl.common._mixins.MutableAttr {
+}
+class arcgis._impl.common._mixins.PropertyMap {
+}
+class arcgis._impl.common._utils.Error {
+}
+class arcgis._impl.common._utils._DisableLogger {
+}
+class arcgis._impl.notification.Notification {
+  _url: None
+  _gis: None
+  _portal: None
+  _con: None
+  _gis: None
+  _con: None
+  _hydrated: None
+  _hydrated: None
+}
+class arcgis._impl.oauth.OAuth {
+  _url: None
+  _gis: None
+  _con: None
+  _portal: None
+}
+class arcgis._impl.tools.BaseAnalytics {
+}
+class arcgis._impl.tools._AsyncService {
+}
+class arcgis._impl.tools._FeatureAnalysisTools {
+  _url: None
+  _gis: None
+  _con: None
+  _verbose: None
+}
+class arcgis._impl.tools._GISService {
+  _token: None
+  url: None
+  _url: None
+  _gis: None
+  _con: None
+  _token: None
+  _gis: None
+  _con: None
+  _gis: None
+  _con: None
+  _token: None
+  _token: None
+  _token: None
+  _token: None
+}
+class arcgis._impl.tools._GeoanalyticsTools {
+}
+class arcgis._impl.tools._GeometryService {
+}
+class arcgis._impl.tools._HydrologyTool {
+  _url: None
+  _gis: None
+  _con: None
+  _verbose: None
+}
+class arcgis._impl.tools._OrthoMappingTools {
+  _url: None
+  _gis: None
+  _con: None
+  _verbose: None
+}
+class arcgis._impl.tools._PackagingTools {
+  _url: None
+  _gis: None
+  _con: None
+  _verbose: None
+}
+class arcgis._impl.tools._RasterAnalysisTools {
+  _url: None
+  _gis: None
+  _con: None
+  _verbose: None
+}
+class arcgis._impl.tools._Tools {
+  _gis: None
+  _geocoders: None
+  _geometry: None
+  _analysis: None
+  _raster_analysis: None
+  _geoanalytics: None
+  _orthomapping: None
+  _packaging: None
+}
+arcgis._impl._async.jobs.Job <|-- arcgis._impl._async.jobs.GeometryJob
+arcgis._impl._async.jobs.Job <|-- arcgis._impl._async.jobs.ItemStatusJob
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._ApplicationDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._DashboardDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._FeatureCollectionDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._FeatureServiceDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._FeatureServiceRefDef
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._FormDefinition
+arcgis._impl.common._clone.CloneNode <|-- arcgis._impl.common._clone._GroupDefinition
+arcgis._impl.common._clone.CloneNode <|-- arcgis._impl.common._clone._ItemDefinition
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._NotebookDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._OperationViewDefintion
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._ProMapDefinition
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._ProProjectPackageDefinition
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._QuickCaptureDefinition
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._clone._TextItemDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._WebMapDefinition
+arcgis._impl.common._clone._TextItemDefinition <|-- arcgis._impl.common._clone._WorkforceProjectDefinition
+arcgis._impl.common._deprecate.DeprecatedWarning <|-- arcgis._impl.common._deprecate.UnsupportedWarning
+arcgis._impl.common._clone._ItemDefinition <|-- arcgis._impl.common._itemdef._expbuilder._WebExperience
+arcgis._impl.common._clone.CloneNode <|-- arcgis._impl.common._itemdef._storymaps._StoryMapDefinition
+arcgis._impl.common._mixins.MutableAttr <|-- arcgis._impl.common._mixins.AttrDict
+arcgis._impl.common._mixins.MutableAttr <|-- arcgis._impl.common._mixins.AttrOrderedDict
+arcgis._impl.common._mixins.Attr <|-- arcgis._impl.common._mixins.MutableAttr
+arcgis._impl.common._mixins.MutableAttr <|-- arcgis._impl.common._mixins.PropertyMap
+arcgis._impl.tools._GISService <|-- arcgis._impl.tools._AsyncService
+arcgis._impl.tools.BaseAnalytics <|-- arcgis._impl.tools._FeatureAnalysisTools
+arcgis._impl.tools._AsyncService <|-- arcgis._impl.tools._GeoanalyticsTools
+arcgis._impl.tools._GISService <|-- arcgis._impl.tools._GeometryService
+arcgis._impl.tools.BaseAnalytics <|-- arcgis._impl.tools._RasterAnalysisTools
+@enduml

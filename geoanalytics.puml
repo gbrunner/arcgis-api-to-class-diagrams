@@ -1,0 +1,7 @@
+@startuml
+class arcgis.geoanalytics._util.GAJob {
+  _gpjob: None
+  _return_service: None
+  _add_messages: None
+}
+@enduml

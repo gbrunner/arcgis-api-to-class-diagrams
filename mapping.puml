@@ -1,0 +1,296 @@
+@startuml
+class arcgis.mapping._msl.layer.MapFeatureLayer {
+  _attachments: None
+  _dynamic_layer: None
+  _time_filter: None
+}
+class arcgis.mapping._types.MapImageLayer {
+  _admin: None
+  service: None
+}
+class arcgis.mapping._msl.layer.MapRasterLayer {
+}
+class arcgis.mapping._msl.layer.MapServiceLayer {
+}
+class arcgis.mapping._msl.layer.MapTable {
+}
+class arcgis.mapping._msl.layer._MSILayerFactory {
+}
+class arcgis.mapping._scenelyrs._lyrs.BuildingLayer {
+  _admin: None
+}
+class arcgis.mapping._scenelyrs._lyrs.EnterpriseSceneLayerManager {
+  _sl: None
+}
+class arcgis.mapping._scenelyrs._lyrs.IntegratedMeshLayer {
+  _admin: None
+}
+class arcgis.mapping._scenelyrs._lyrs.Object3DLayer {
+  _admin: None
+}
+class arcgis.mapping._scenelyrs._lyrs.Point3DLayer {
+  _admin: None
+}
+class arcgis.mapping._scenelyrs._lyrs.PointCloudLayer {
+  _admin: None
+}
+class arcgis.mapping._scenelyrs._lyrs.SceneLayer {
+}
+class arcgis.mapping._scenelyrs._lyrs.SceneLayerManager {
+  _sl: None
+}
+class arcgis.mapping._scenelyrs._lyrs._SceneLayerFactory {
+}
+class arcgis.mapping._types.EnterpriseMapImageLayerManager {
+  _ms: None
+}
+class arcgis.mapping._types.EnterpriseVectorTileLayerManager {
+  _vtl: None
+}
+class arcgis.mapping._types.Events {
+}
+class arcgis.mapping._types.MapImageLayerManager {
+  _ms: None
+}
+class arcgis.mapping._types.OfflineMapAreaManager {
+  _gis: None
+  _portal: None
+  _item: None
+  _web_map: None
+  _url: None
+  _pm: None
+}
+class arcgis.mapping._types.PackagingJob {
+  _future: None
+  _start_time: None
+}
+class arcgis.mapping._types.VectorTileLayer {
+}
+class arcgis.mapping._types.VectorTileLayerManager {
+  _vtl: None
+}
+class arcgis.mapping._types.WebMap {
+  _id: None
+  type: None
+  _pop_ups: None
+  _navigation: None
+  _scale_bar: None
+  _bookmarks: None
+  _legend: None
+  _layer_visibility: None
+  _basemap_switcher: None
+  _search: None
+  _zoom: None
+  _events: None
+  _height: None
+  _width: None
+  item: None
+  _gis: None
+  _con: None
+  _webmapdict: None
+  definition: None
+  _layers: None
+  _tables: None
+  _basemap: None
+  _extent: None
+  _default_spatial_reference: None
+  _basemap: None
+  _gallery_basemaps: None
+  _webmapdict: None
+  definition: None
+  _gis: None
+  _con: None
+  _basemap: None
+  _con: None
+  item: None
+  _layers: None
+  _tables: None
+  _extent: None
+  _mapview: None
+}
+class arcgis.mapping._types.WebScene {
+  item: None
+  _gis: None
+}
+class arcgis.mapping._types._ApplicationProperties {
+  _app_prop: None
+  _app_prop: None
+}
+class arcgis.mapping.forms.FormCollection {
+  _parent: None
+  _index: None
+}
+class arcgis.mapping.forms.FormElement {
+  _form: None
+  _element_type: None
+  _description: None
+  _label: None
+  _visibility_expression: None
+  _kwargs: None
+}
+class arcgis.mapping.forms.FormExpressionInfo {
+  _expression: None
+  _name: None
+  _return_type: None
+  _title: None
+}
+class arcgis.mapping.forms.FormFieldElement {
+  _domain: None
+  _editable: None
+  _field_name: None
+  _hint: None
+  _input_type: None
+  _required_expression: None
+}
+class arcgis.mapping.forms.FormGroupElement {
+  _form_elements: None
+  _initial_state: None
+}
+class arcgis.mapping.forms.FormInfo {
+  _original_layer: None
+  _layer_data: None
+  _form: None
+  _title: None
+  _description: None
+  _expression_infos: None
+  _form_elements: None
+  _parent: None
+  feature_layer: None
+  _fields: None
+  _edit_fields: None
+  _id_fields: None
+  _required_fields: None
+}
+class arcgis.mapping.ogc._base.BaseOGC {
+  _url: None
+  _gis: None
+  _min_scale: None
+  _max_scale: None
+  _title: None
+  _opacity: None
+  _id: None
+  _copyright: None
+}
+class arcgis.mapping.ogc._base.BaseOpenData {
+  _url: None
+  _gis: None
+  _min_scale: None
+  _max_scale: None
+  _title: None
+  _opacity: None
+  _id: None
+  _copyright: None
+  _sql: None
+}
+class arcgis.mapping.ogc._csv.CSVLayer {
+  _url: None
+  _item: None
+  _item: None
+  _url: None
+  _gis: None
+  _copyright: None
+  _delimiter: None
+  _fields: None
+  _sql: None
+  _id: None
+  _title: None
+  _min_scale: None
+  _max_scale: None
+  _opacity: None
+}
+class arcgis.mapping.ogc._geojson.GeoJSONLayer {
+  _data: None
+  _data: None
+  _data: None
+  _url: None
+  _type: None
+  _copyright: None
+  _title: None
+  _id: None
+  _min_scale: None
+  _max_scale: None
+  _opacity: None
+  _renderer: None
+  _renderer: None
+  _renderer: None
+}
+class arcgis.mapping.ogc._georss.GeoRSSLayer {
+  _id: None
+  _url: None
+  _min_scale: None
+  _max_scale: None
+  _opacity: None
+  _copyright: None
+  _title: None
+  point_symbol: None
+  polygon_symbol: None
+  line_symbol: None
+  title: None
+}
+class arcgis.mapping.ogc._kml.KMLLayer {
+  _url: None
+  _title: None
+  _id: None
+  _min_scale: None
+  _max_scale: None
+  _opacity: None
+  _copyright: None
+  _gis: None
+}
+class arcgis.mapping.ogc._service.OGCCollection {
+  _gis: None
+  _url: str
+}
+class arcgis.mapping.ogc._service.OGCFeatureService {
+  _gis: None
+  _url: None
+}
+class arcgis.mapping.ogc._wms.WMSLayer {
+  _id: None
+  _version: None
+  _con: None
+  _title: None
+  _gis: None
+  _url: None
+  _add_token: None
+  _opacity: None
+  _min_scale: None
+  _max_scale: None
+}
+class arcgis.mapping.ogc.wmts.WMTSLayer {
+  _id: None
+  _version: None
+  _con: None
+  _title: None
+  _gis: None
+  _url: None
+  _add_token: None
+  _min_scale: None
+  _max_scale: None
+  _opacity: None
+  _type: None
+}
+class arcgis.mapping.renderer._DotDensity {
+  _df: None
+  _attributes: None
+  _dot_value: None
+  _ref_scale: None
+  _unit: None
+  _blend_dots: None
+  _dot_shape: None
+  _dot_size: None
+  _bg_color: None
+  _seed: None
+}
+arcgis.mapping._msl.layer.MapFeatureLayer <|-- arcgis.mapping._msl.layer.MapRasterLayer
+arcgis.mapping._msl.layer.MapFeatureLayer <|-- arcgis.mapping._msl.layer.MapTable
+arcgis.mapping.forms.FormElement <|-- arcgis.mapping.forms.FormFieldElement
+arcgis.mapping.forms.FormElement <|-- arcgis.mapping.forms.FormGroupElement
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc._base.BaseOpenData
+arcgis.mapping.ogc._base.BaseOpenData <|-- arcgis.mapping.ogc._csv.CSVLayer
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc._geojson.GeoJSONLayer
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc._georss.GeoRSSLayer
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc._kml.KMLLayer
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc._wms.WMSLayer
+arcgis.mapping.ogc._base.BaseOGC <|-- arcgis.mapping.ogc.wmts.WMTSLayer
+@enduml

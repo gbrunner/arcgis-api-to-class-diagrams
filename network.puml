@@ -1,0 +1,29 @@
+@startuml
+class arcgis.network._layer.ClosestFacilityLayer {
+}
+class arcgis.network._layer.NAJob {
+  _task: None
+  _task: None
+  _future: None
+  _start_time: None
+}
+class arcgis.network._layer.NetworkDataset {
+  service: None
+  _closestFacilityLayers: None
+  _routeLayers: None
+  _serviceAreaLayers: None
+  _odCostMatrix: None
+}
+class arcgis.network._layer.NetworkLayer {
+}
+class arcgis.network._layer.ODCostMatrixLayer {
+}
+class arcgis.network._layer.RouteLayer {
+}
+class arcgis.network._layer.ServiceAreaLayer {
+}
+arcgis.network._layer.NetworkLayer <|-- arcgis.network._layer.ClosestFacilityLayer
+arcgis.network._layer.NetworkLayer <|-- arcgis.network._layer.ODCostMatrixLayer
+arcgis.network._layer.NetworkLayer <|-- arcgis.network._layer.RouteLayer
+arcgis.network._layer.NetworkLayer <|-- arcgis.network._layer.ServiceAreaLayer
+@enduml

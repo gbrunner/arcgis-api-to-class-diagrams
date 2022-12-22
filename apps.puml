@@ -1,0 +1,639 @@
+@startuml
+class arcgis.apps.dashboard._details._details.Details {
+  item: None
+  _max_features_displayed: None
+  type: None
+  layer: None
+  _show_title: None
+  _show_content: None
+  _show_media: None
+  _show_attachment: None
+  _show_last_update: None
+  _no_data: None
+}
+class arcgis.apps.dashboard._utils._basewidget.NoDataProperties {
+}
+class arcgis.apps.dashboard._utils._basewidget._BaseWidget {
+  _title: None
+  _name: None
+  _description: None
+  _background_color: None
+  _text_color: None
+  _id: None
+  _type: None
+  title: None
+  name: None
+  description: None
+  _width: None
+  _height: None
+}
+class arcgis.apps.dashboard._embcontent._embcontent.EmbeddedContent {
+  _url: None
+  _url: None
+  item: None
+  layer: None
+  type: None
+  _data_type: None
+  _content_type: None
+  _max_features_displayed: None
+  _refresh_interval: None
+  _no_data: None
+}
+class arcgis.apps.dashboard._gauge._gauge.Gauge {
+  item: None
+  type: None
+  layer: None
+  _max_features: None
+  _show_last_update: None
+  _nodata: None
+  _novalue: None
+  _data: None
+  _mindata: None
+  _maxdata: None
+  _gauge: None
+}
+class arcgis.apps.dashboard._gauge._gauge.GaugeData {
+}
+class arcgis.apps.dashboard._gauge._gauge.GaugeProperties {
+}
+class arcgis.apps.dashboard._header._header.Header {
+  _size: None
+  _title: None
+  _subtitle: None
+  _margin: None
+  type: None
+  size: None
+  title: None
+  subtitle: None
+  margin: None
+  _logo_image_url: None
+  _logo_url: None
+  _background_image: None
+  _background_image_placement: None
+  background_image_placement: None
+  _sign_out_link: None
+  _menu_links: None
+  menu_links: None
+  _text_color: None
+  _background_color: None
+  _selectors: None
+}
+class arcgis.apps.dashboard._indicator._indicator.Indicator {
+  item: None
+  type: None
+  layer: None
+  _nodata: None
+  _novalue: None
+  _data: None
+  _reference: None
+  _max_display_features: None
+  _show_last_update: None
+}
+class arcgis.apps.dashboard._indicator._indicator.IndicatorData {
+}
+class arcgis.apps.dashboard._indicator._indicator.ReferenceData {
+}
+class arcgis.apps.dashboard._list._list.Events {
+}
+class arcgis.apps.dashboard._list._list.List {
+  item: None
+  type: None
+  layer: None
+  _seperator_color: None
+  _selection_color: None
+  _selection_text_color: None
+  _max_features: None
+  _selection_mode: None
+  _show_last_update: None
+  _nodata: None
+  _list_text: None
+  _list_icon: None
+  _events: None
+}
+class arcgis.apps.dashboard._map_legend._map_legend.MapLegend {
+  _map_widget: None
+  _type: None
+}
+class arcgis.apps.dashboard._piechart._pie_chart.Events {
+}
+class arcgis.apps.dashboard._utils._basewidget.Legend {
+}
+class arcgis.apps.dashboard._piechart._pie_chart.OutlineProperties {
+}
+class arcgis.apps.dashboard._piechart._pie_chart.PieChart {
+  item: None
+  type: None
+  layer: None
+  _labels: None
+  _max_features: None
+  _show_last_update: None
+  _targetid: None
+  _data: None
+  _pie: None
+  _slices: None
+  _nodata: None
+  _legend: None
+  _outline: None
+  _events: None
+}
+class arcgis.apps.dashboard._piechart._pie_chart.PieChartData {
+}
+class arcgis.apps.dashboard._piechart._pie_chart.PieChartProperties {
+}
+class arcgis.apps.dashboard._piechart._pie_chart.SliceProperties {
+}
+class arcgis.apps.dashboard._richtext._richtext.RichText {
+  _type: None
+  _text: None
+  text: None
+  _nodata: None
+}
+class arcgis.apps.dashboard._serialchart._serial_chart.Events {
+}
+class arcgis.apps.dashboard._serialchart._serial_chart.SerialChart {
+  item: None
+  layer: None
+  type: None
+  _data: None
+  _category_axis_properties: None
+  _scroll: None
+  _value_axis_properties: None
+  _legend: None
+  _color: None
+  _font_size: None
+  _orientation: None
+  _last_update: None
+  _no_data: None
+  _events: None
+}
+class arcgis.apps.dashboard._serialchart._serial_chart.SerialChartData {
+}
+class arcgis.apps.dashboard._serialchart._serial_chart._CategoryAxisProperties {
+  _item: None
+}
+class arcgis.apps.dashboard._serialchart._serial_chart._ValueAxisProperties {
+}
+class arcgis.apps.dashboard._side_widgets._addon.CategorySelector {
+  _categories_from: None
+  _id: None
+  _selector: None
+  _dataset: None
+}
+class arcgis.apps.dashboard._side_widgets._addon.CategorySelectorProperties {
+}
+class arcgis.apps.dashboard._side_widgets._addon.DatePicker {
+  _id: None
+  type: None
+  _operator_mapping: None
+  _selection_type: None
+  _selection_type: None
+  operator: None
+  _min_value: None
+  _min_value: None
+  _min_value: None
+  _max_value: None
+  _max_value: None
+  _max_value: None
+  operator: None
+  _max_value: None
+  _min_value: None
+  _min_value: None
+  _min_value: None
+  label: None
+}
+class arcgis.apps.dashboard._side_widgets._addon.NumberSelector {
+  _json: None
+  _display_type: None
+  type: None
+  _id: None
+  _label: None
+  _increment: None
+  _lower_limit: None
+  _upper_limit: None
+  _lower_default: None
+  _upper_default: None
+  _range: None
+  _operator: None
+  _left_placeholder_text: None
+  _right_placeholder_text: None
+  _dataset: None
+  _operator_mapping: None
+  _constraint: None
+}
+class arcgis.apps.dashboard._sidepanel.side_panel.SidePanel {
+  _title: None
+  _description: None
+  type: None
+  _text_color: None
+  _background_color: None
+  _allow_sliding: None
+  _selectors: None
+}
+class arcgis.apps.hub.hub.Event {
+  _gis: None
+  _hub: None
+  _eventdict: None
+  definition: None
+}
+class arcgis.apps.hub.hub.EventManager {
+  _hub: None
+  _gis: None
+  _event: None
+}
+class arcgis.apps.hub.hub.Hub {
+  gis: None
+  _gis_id: None
+  _gis_id: None
+}
+class arcgis.apps.hub.hub.Initiative {
+  item: None
+  _gis: None
+  _hub: None
+  _initiativedict: None
+  definition: None
+  definition: None
+}
+class arcgis.apps.hub.hub.InitiativeManager {
+  _hub: None
+  _gis: None
+}
+class arcgis.apps.hub.sites.PageManager {
+  _gis: None
+  _hub: None
+  _hub: None
+  _gis: None
+  _site: None
+}
+class arcgis.apps.hub.sites.Site {
+  item: None
+  _gis: None
+  _sitedict: None
+  definition: None
+  definition: None
+}
+class arcgis.apps.hub.sites.SiteManager {
+  _gis: None
+  _hub: None
+  _hub: None
+  _gis: None
+  initiative: None
+}
+class arcgis.apps.hub.sites.Page {
+  item: None
+  _gis: None
+  _pagedict: None
+  definition: None
+  definition: None
+}
+class arcgis.apps.storymap.story.StoryMap {
+  _gis: None
+  _gis: None
+  _item: None
+  _itemid: None
+  _resources: None
+  _properties: None
+  _properties: None
+}
+enum arcgis.apps.storymap.story.Themes {
+  SUMMIT: summit {static}
+  OBSIDIAN: obsidian {static}
+  RIDGELINE: ridgeline {static}
+  MESA: mesa {static}
+  TIDAL: tidal {static}
+  SLATE: slate {static}
+}
+class arcgis.apps.storymap.story_content.Audio {
+  _story: None
+  _type: None
+  node: None
+  resource_node: None
+  _path: None
+  _path: Optional[str]
+  node: None
+  resource_node: None
+}
+class arcgis.apps.storymap.story_content.Button {
+  _story: None
+  _type: None
+  node: None
+  _link: None
+  _text: None
+  node: None
+  _link: Optional[str]
+  _text: Optional[str]
+}
+class arcgis.apps.storymap.story_content.Embed {
+  _story: None
+  _type: None
+  node: None
+  _path: None
+  _path: Optional[str]
+  node: None
+}
+class arcgis.apps.storymap.story_content.Gallery {
+  _story: None
+  _type: None
+  node: None
+  _children: None
+  _children: None
+  node: None
+}
+class arcgis.apps.storymap.story_content.Image {
+  _story: None
+  _type: None
+  _url: None
+  node: None
+  resource_node: None
+  _url: None
+  _path: None
+  _path: None
+  _path: Optional[str]
+  node: None
+  resource_node: None
+  _url: None
+}
+class arcgis.apps.storymap.story_content.Map {
+  _story: None
+  node: None
+  resource_node: None
+  _path: None
+  _map_layers: None
+  _extent: None
+  _center: None
+  _viewpoint: None
+  _zoom: None
+  _type: None
+  _lighting_date: None
+  node: None
+  resource_node: None
+  _path: None
+  _type: None
+  _center: None
+  _extent: None
+  _zoom: None
+  _viewpoint: None
+  _map_layers: None
+  _map_layers: None
+  _center: None
+  _extent: None
+  _zoom: None
+  _viewpoint: None
+  _camera: None
+  _lighting_date: None
+}
+class arcgis.apps.storymap.story_content.Sidecar {
+  _story: None
+  node: str
+  _type: None
+  _subtype: None
+  _slides: None
+}
+class arcgis.apps.storymap.story_content.Swipe {
+  node: str
+  _story: None
+  _type: None
+  _slides: None
+  _media_type: None
+  _slides: None
+  _media_type: None
+}
+class arcgis.apps.storymap.story_content.Text {
+  _story: None
+  _type: None
+  node: None
+  _text: None
+  _style: None
+  node: None
+  _text: Optional[str]
+  _style: None
+  _color: str
+  _color: None
+}
+enum arcgis.apps.storymap.story_content.TextStyles {
+  PARAGRAPH: paragraph {static}
+  LARGEPARAGRAPH: large-paragraph {static}
+  BULLETLIST: bullet-list {static}
+  NUMBERLIST: numbered-list {static}
+  HEADING: h2 {static}
+  SUBHEADING: h3 {static}
+  QUOTE: quote {static}
+}
+class arcgis.apps.storymap.story_content.Timeline {
+  _story: None
+  node: str
+  _type: None
+  _subtype: None
+  _events: None
+}
+class arcgis.apps.storymap.story_content.Video {
+  _story: None
+  _type: None
+  _url: None
+  node: None
+  resource_node: None
+  _path: None
+  resource_node: None
+  _path: None
+  _url: None
+  _path: Optional[str]
+  node: None
+  _url: None
+  resource_node: None
+  resource_node: None
+}
+class arcgis.apps.survey123._survey.Survey {
+  _si: None
+  _gis: None
+  _sm: None
+  _baseurl: None
+  _ssi: None
+}
+class arcgis.apps.survey123._survey.SurveyManager {
+  _baseurl: None
+  _gis: None
+}
+class arcgis.apps.tracker._errors.LocationTrackingError {
+  message: None
+}
+class arcgis.apps.tracker._location_tracking.LocationTrackingManager {
+  _gis: None
+}
+class arcgis.apps.tracker._track_view.MobileUserManager {
+  _track_view: None
+}
+class arcgis.apps.tracker._track_view.TrackView {
+  _item: None
+  _gis: None
+}
+class arcgis.apps.tracker._track_view.TrackViewerManager {
+  _track_view: None
+}
+class arcgis.apps.workforce._schemas.AssignmentSchema {
+}
+class arcgis.apps.workforce._schemas.AssignmentTypeSchema {
+}
+class arcgis.apps.workforce._schemas.DispatcherSchema {
+}
+class arcgis.apps.workforce._schemas.FeatureSchema {
+  _feature_layer: None
+}
+class arcgis.apps.workforce._schemas.IntegrationSchema {
+}
+class arcgis.apps.workforce._schemas.TrackSchema {
+}
+class arcgis.apps.workforce._schemas.WorkerSchema {
+}
+class arcgis.apps.workforce.exceptions.WorkforceError {
+  message: None
+}
+class arcgis.apps.workforce.assignment.Assignment {
+  _schema: None
+  worker: None
+  worker: None
+  worker: None
+  dispatcher: None
+  dispatcher: None
+  dispatcher: None
+  dispatcher: None
+  assignment_type: None
+  assignment_type: None
+  assignment_type: None
+  geometry: None
+  assigned_date: None
+  assignment_read: None
+  completed_date: None
+  declined_comment: None
+  declined_date: None
+  description: None
+  due_date: None
+  in_progress_date: None
+  location: None
+  notes: None
+  paused_date: None
+  priority: None
+  status: None
+  work_order_id: None
+  assignment_type: None
+  dispatcher: None
+  worker: None
+}
+class arcgis.apps.workforce.managers.AssignmentAttachmentManager {
+  assignment: None
+}
+class arcgis.apps.workforce.managers.AssignmentIntegrationManager {
+  project: None
+  integration_table: None
+}
+class arcgis.apps.workforce.managers.AssignmentManager {
+  project: None
+}
+class arcgis.apps.workforce.assignment_type.AssignmentType {
+  _schema: None
+  _coded_value: None
+  name: None
+  _coded_value: None
+  _coded_value: None
+  project: None
+}
+class arcgis.apps.workforce.managers.AssignmentTypeManager {
+  project: None
+}
+class arcgis.apps.workforce.managers.DispatcherManager {
+  project: None
+}
+class arcgis.apps.workforce.feature_model.FeatureModel {
+  _schema: None
+  project: None
+  feature_layer: None
+  _feature: None
+  _feature: None
+}
+class arcgis.apps.workforce.exceptions.ServerError {
+  errors: None
+}
+class arcgis.apps.workforce.managers.TrackManager {
+  project: None
+}
+class arcgis.apps.workforce.exceptions.ValidationError {
+  subject: None
+}
+class arcgis.apps.workforce.managers.WorkerManager {
+  project: None
+}
+class arcgis.apps.workforce.exceptions.WorkforceWarning {
+  message: None
+}
+class arcgis.apps.workforce.attachment.Attachment {
+  assignment: None
+  _attachment_info: None
+}
+class arcgis.apps.workforce.model.Model {
+}
+class arcgis.apps.workforce.dispatcher.Dispatcher {
+  _schema: None
+  contact_number: None
+  name: None
+  user_id: None
+}
+class arcgis.apps.workforce.integration.Integration {
+  _schema: None
+  integration_id: None
+  prompt: None
+  url_template: None
+  assignment_type: None
+  assignment_type: None
+}
+class arcgis.apps.workforce.project.Project {
+  gis: None
+  _item: None
+  _item_data: None
+  _item_data: None
+  _assignment_schema: None
+  _track_schema: None
+  _track_schema: None
+  _worker_schema: None
+  _assignment_types: None
+  _integration_schema: None
+  _dispatcher_schema: None
+}
+class arcgis.apps.workforce.track.Track {
+  _schema: None
+  accuracy: None
+  geometry: None
+}
+class arcgis.apps.workforce.worker.Worker {
+  _schema: None
+  geometry: None
+  contact_number: None
+  name: None
+  notes: None
+  status: None
+  title: None
+  user_id: None
+}
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._details._details.Details
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._embcontent._embcontent.EmbeddedContent
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._gauge._gauge.Gauge
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._indicator._indicator.Indicator
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._list._list.List
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._map_legend._map_legend.MapLegend
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._piechart._pie_chart.PieChart
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._richtext._richtext.RichText
+arcgis.apps.dashboard._utils._basewidget._BaseWidget <|-- arcgis.apps.dashboard._serialchart._serial_chart.SerialChart
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.AssignmentSchema
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.AssignmentTypeSchema
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.DispatcherSchema
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.IntegrationSchema
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.TrackSchema
+arcgis.apps.workforce._schemas.FeatureSchema <|-- arcgis.apps.workforce._schemas.WorkerSchema
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.assignment.Assignment
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.assignment_type.AssignmentType
+arcgis.apps.workforce.model.Model <|-- arcgis.apps.workforce.feature_model.FeatureModel
+arcgis.apps.workforce.exceptions.WorkforceError <|-- arcgis.apps.workforce.exceptions.ServerError
+arcgis.apps.workforce.exceptions.WorkforceError <|-- arcgis.apps.workforce.exceptions.ValidationError
+arcgis.apps.workforce.model.Model <|-- arcgis.apps.workforce.attachment.Attachment
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.dispatcher.Dispatcher
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.integration.Integration
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.track.Track
+arcgis.apps.workforce.feature_model.FeatureModel <|-- arcgis.apps.workforce.worker.Worker
+@enduml

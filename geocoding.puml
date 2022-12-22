@@ -1,0 +1,6 @@
+@startuml
+class arcgis.geocoding._functions.Geocoder {
+  service: None
+  _address_field: None
+}
+@enduml

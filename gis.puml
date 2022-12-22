@@ -1,0 +1,1317 @@
+@startuml
+class arcgis.gis._impl._apikeys.APIKey {
+  _item: None
+  _gis: None
+}
+class arcgis.gis._impl._apikeys.APIKeyManager {
+  _gis: None
+  _base_url: None
+}
+class arcgis.gis._impl._certificates.CertificateManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis._impl._con._authguess.GuessAuth {
+  username: None
+  password: None
+  auth: None
+  pos: None
+  _try_auth_count: None
+  proxies: None
+  _legacy: None
+}
+class arcgis.gis._impl._con._connection.Connection {
+  _use_gen_token: None
+  _is_hosted_nb_home: None
+  _proxy: None
+  _timeout: None
+  _all_ssl: None
+  trust_env: None
+  _custom_adapter: None
+  legacy: None
+  _custom_auth: None
+  _product: None
+  _product: None
+  _baseurl: None
+  _username: str
+  _password: str
+  _expiration: None
+  _portal_connection: None
+  _portal_connection: None
+  _referer: None
+  _auth: None
+  _referer: None
+  _referer: None
+  _referer: None
+  _verify_cert: None
+  _cert_file: None
+  _key_file: None
+  _proxy_url: None
+  _proxy_url: None
+  _proxy_port: None
+  _proxy_username: None
+  _proxy_password: None
+  _header: None
+  _client_id: None
+  _client_secret: None
+  _token_url: None
+  _auth: None
+  _auth: None
+  _token: None
+  _expiration: None
+  _referer: None
+  _auth: None
+  _token: None
+  _auth: None
+  _api_key: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _auth: None
+  _baseurl: None
+  _baseurl: None
+  _baseurl: None
+  _auth: None
+  _session: None
+  _product: None
+  _product: None
+  _product: None
+  _baseurl: None
+  baseurl: None
+}
+class arcgis.gis.GIS {
+  _validate_item_url: None
+  _use_gen_token: None
+  _proxy_host: None
+  _proxy_port: None
+  _referer: None
+  _timeout: None
+  _expiration: None
+  _url: None
+  _username: None
+  _password: None
+  _key_file: None
+  _cert_file: None
+  _portal: None
+  _con: None
+  _verify_cert: bool
+  _client_id: None
+  _datastores_list: None
+  _utoken: None
+  _api_key: None
+  _utoken: None
+  _utoken: None
+  _api_key: None
+  _expiration: None
+  _url: None
+  _expiration: None
+  _portal: None
+  _portal: None
+  _url: None
+  _url: None
+  _portal: None
+  _lazy_properties: None
+  _con: None
+  _url: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  admin: None
+  _is_agol: None
+  _product_version: None
+}
+class arcgis.gis.Item {
+  _portal: None
+  _gis: None
+  itemid: None
+  thumbnail: None
+  _workdir: None
+  _hydrated: None
+  _hydrated: None
+  _depend: None
+  layers: None
+  tables: None
+}
+class arcgis.gis._impl._datastores._ds.PortalDataStore {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis._impl._jb.StatusJob {
+  _thing: None
+  _future: None
+  _start_time: None
+  _key: None
+  _op: None
+  _jobid: None
+  _gis: None
+}
+class arcgis.gis._impl._invitations.InvitationManager {
+  _url: None
+  _gis: None
+}
+class arcgis.gis._impl._portalpy.Portal {
+  _use_gen_token: None
+  _is_arcpy: None
+  _is_arcpy: None
+  url: None
+  url: None
+  resturl: None
+  resturl: None
+  resturl: None
+  resturl: None
+  hostname: None
+  workdir: None
+  _basepostdata: None
+  _version: None
+  _properties: None
+  _resources: None
+  _languages: None
+  _regions: None
+  _is_pre_162: None
+  _is_pre_21: None
+  con: None
+  con: None
+  con: None
+}
+class arcgis.gis._impl._profile.ProfileManager {
+  _os: None
+  _cfg_file_path: None
+  _cfg_exists: None
+}
+class arcgis.gis._impl._profile.ServerProfileManager {
+  _os: None
+  _cfg_file_path: None
+  _cfg_exists: None
+}
+class arcgis.gis._impl.nbauth.AESCipher {
+  _key: None
+  _iv: None
+  cipher: None
+}
+class arcgis.gis.admin._base.BasePortalAdmin {
+  _url: None
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._catagoryschema.CategoryManager {
+  _gis: None
+  _con: None
+  _url: None
+}
+class arcgis.gis.admin._collaboration.Collaboration {
+  _id: None
+  _cm: None
+  _portal: None
+  _basepath: None
+}
+class arcgis.gis.admin._collaboration.CollaborationManager {
+  _gis: None
+  _portal: None
+  _pid: None
+  _pid: None
+  _basepath: None
+}
+class arcgis.gis.Group {
+  _gis: None
+  _migrate: None
+  _portal: None
+  groupid: None
+  thumbnail: None
+  _workdir: None
+  _hydrated: None
+}
+class arcgis.gis.admin._creditmanagement.CreditManager {
+  _gis: None
+  _portal: None
+  _con: None
+}
+class arcgis.gis.admin._federation.Federation {
+  _url: None
+  _gis: None
+  _portal: None
+  _con: None
+}
+class arcgis.gis.admin._idp.IdentityProviderManager {
+  _gis: None
+  _portal: None
+  _url: None
+  _allowed_keys: None
+}
+class arcgis.gis.admin._license.Bundle {
+  _gis: None
+  _url: None
+  _con: None
+  _id: None
+  _properties: None
+}
+class arcgis.gis.admin._license.License {
+  _gis: None
+  _con: None
+  _properties: None
+}
+class arcgis.gis.admin._license.LicenseManager {
+  _url: None
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.User {
+  _gis: None
+  _portal: None
+  _user_id: None
+  thumbnail: None
+  _workdir: None
+  _invitemgr: None
+  _hydrated: None
+  _user_id: None
+  _user_id: None
+}
+class arcgis.gis.GroupManager {
+  _gis: None
+  _portal: None
+}
+class arcgis.gis.admin._livingatlas.LivingAtlas {
+  _url: None
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._logs.Logs {
+  _url: None
+  _gis: None
+  _portal: None
+  _con: None
+}
+class arcgis.gis.admin._machines.Machine {
+  _info: None
+  _info: None
+  _name: None
+  _url: None
+  _pa: None
+  _con: None
+  _gis: None
+}
+class arcgis.gis.admin._machines.Machines {
+  _url: None
+  _pa: None
+}
+class arcgis.gis.admin._metadata.MetadataManager {
+  _gis: None
+  _portal: None
+  _con: None
+}
+class arcgis.gis.admin._resources.PortalResourceManager {
+  _gis: None
+  _portal: None
+  _is_portal: None
+  _workdir: None
+}
+class arcgis.gis.admin._security.EnterpriseGroups {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._security.EnterpriseUsers {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._security.OAuth {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._security.PasswordPolicy {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._security.SSLCertificate {
+  _con: None
+  _gis: None
+  _con: None
+  _mgr: None
+}
+class arcgis.gis.admin._security.SSLCertificates {
+  _certs: None
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._security.Security {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._site.Site {
+  _url: None
+  _pa: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._socialproviders.SocialProviders {
+  _gis: None
+  _portal: None
+  _url: None
+}
+class arcgis.gis.admin._system.Directory {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.EmailManager {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.Indexer {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.Licenses {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.PortalLicense {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.System {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.WebAdaptor {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._system.WebAdaptors {
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._usage.AGOLUsageReports {
+}
+class arcgis.gis.admin._ux.UX {
+  _gis: None
+  _portal: None
+}
+class arcgis.gis.admin._wh.Webhook {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin._wh.WebhookManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.admin.agoladmin.AGOLAdminManager {
+  _gis: None
+  _con: None
+  _ux: None
+  _collaborations: None
+  _metadata: None
+  resources: None
+}
+class arcgis.gis.admin.portaladmin.PortalAdminManager {
+  _con: None
+  _gis: None
+  _con: None
+  resources: None
+  _con: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.agoserver._admin.AGOLServerManager {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.agoserver._admin.AGOLServersManager {
+  _gis: GIS
+}
+class arcgis.gis.agoserver._api.AGOLServicesDirectory {
+  _gis: GIS
+  _url: str
+}
+class arcgis.gis.clone._base.BaseCloneDefinition {
+}
+class arcgis.gis.clone._base.BaseCloneItemDefinition {
+}
+class arcgis.gis.clone._base.BaseCloneTextItemDefinition {
+}
+class arcgis.gis.kubernetes._admin._adaptors.WebAdaptorManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._base._BaseKube {
+  _url: str
+  _con: None
+  _gis: None
+}
+class arcgis.gis.kubernetes._admin._architecture.ArchitectureManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._content.LanguageManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._datastores.DataStore {
+  _url: None
+  _gis: None
+  _con: None
+  _parent: None
+}
+class arcgis.gis.kubernetes._admin._datastores.DataStores {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._deployment.Deployment {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._deployment.DeploymentManager {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.kubernetes._admin._deployment.DeploymentProperty {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._jobs.JobManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._license.LicenseManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._logs.LogManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._mode.Mode {
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeEnterpriseGroups {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeEnterpriseUser {
+  _url: None
+  _gis: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeOrgFederations {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeOrgLicense {
+  _url: str
+  _gis: None
+  _con: None
+  _properties: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeOrgSecurity {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeOrganization {
+  _gis: None
+  _url: None
+  _con: None
+  _properties: None
+  _json_dict: None
+}
+class arcgis.gis.kubernetes._admin._organizations.KubeOrganizations {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._overview.Overview {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._recovery.Backup {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._recovery.BackupStore {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._recovery.RecoveryManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._security.KubeSecurity {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._security.KubeSecurityCert {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._security.KubeSecurityConfig {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._security.KubeSecurityIngress {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._security.KubeSecuritySAML {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._services.KubeService {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._services.ServicesManager {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._system.Container {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._system.Indexer {
+}
+class arcgis.gis.kubernetes._admin._system.Server {
+}
+class arcgis.gis.kubernetes._admin._system.ServerDefaults {
+}
+class arcgis.gis.kubernetes._admin._system.ServerManager {
+}
+class arcgis.gis.kubernetes._admin._system.SystemManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._tasks.TaskManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.kubernetes._admin._upgrades.UpgradeManager {
+  _gis: GIS
+  _con: None
+  _url: str
+}
+class arcgis.gis.tasks._schedule.Task {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.kubernetes._admin._uploads.Uploads {
+  _url: None
+  _url: None
+  _con: None
+  _json_dict: None
+  _json: None
+}
+class arcgis.gis.kubernetes._admin._usage.UsageStatistics {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.kubernetes._admin.kadmin.KubernetesAdmin {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.kubernetes._server._servicedir.KubeServiceDirectory {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.server._service._layerfactory.Service {
+}
+class arcgis.gis.kubernetes._sharing.api.KbertnetesPy {
+  _timeout: None
+  _api_key: str
+  _is_arcpy: None
+  url: None
+  url: None
+  resturl: None
+  resturl: None
+  resturl: None
+  resturl: None
+  hostname: None
+  workdir: str
+  _basepostdata: None
+  _version: None
+  _properties: None
+  _resources: None
+  _languages: None
+  _regions: None
+  _is_pre_162: None
+  _is_pre_21: None
+  con: None
+  con: None
+  con: None
+}
+class arcgis.gis.mission._base.BaseMissionServer {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._logs.LogManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._machines.Machine {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._machines.MachineManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission.api.MissionCatalog {
+  _url: None
+  _gis: None
+  _con: None
+  _urls: None
+}
+class arcgis.gis.mission._ms.MissionServer {
+  catalog: None
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._security.SecurityManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._system.SystemManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._site.SiteManager {
+  _url: None
+  _nb: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._system.DirectoryManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._system.WebAdaptor {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission._system.WebAdaptorManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission.api.Mission {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.mission.api.MissionJob {
+  _url: str
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._dataaccess.NotebookDataAccess {
+  _url: None
+  _gis: None
+}
+class arcgis.gis.nb._dataaccess.NotebookFile {
+  _definition: Dict[str, Any]
+  _da: None
+}
+class arcgis.gis.nb._logs.LogManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._machines.Machine {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._machines.MachineManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._nbm.Notebook {
+  _url: None
+  _item_id: None
+  _properties: None
+  _gis: None
+}
+class arcgis.gis.nb._nbm.NotebookManager {
+  _url: None
+  _nbs: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._nbm.Runtime {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._security.SecurityManager {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._services.NBService {
+  _url: None
+  _gis: None
+}
+class arcgis.gis.nb._services.NBServicesManager {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.nb._site.SiteManager {
+  _url: None
+  _nb: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._snapshot.SnapShot {
+  _item: Item
+  _sm: None
+  properties: dict
+}
+class arcgis.gis.nb._snapshot.SnapshotManager {
+  _url: None
+  _gis: None
+}
+class arcgis.gis.nb._system.Container {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._system.ContainerNotebook {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.nb._system.DirectoryManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.nb._system.SystemManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.nb._system.WebAdaptor {
+  _url: None
+  _gis: None
+  _con: None
+}
+class arcgis.gis.nb._system.WebAdaptorManager {
+  _url: str
+  _gis: GIS
+  _con: None
+}
+class arcgis.gis.nb.notebook.NotebookServer {
+  _url: None
+  _gis: None
+}
+class arcgis.gis.server._common._base.BaseServer {
+  _url: None
+  _con: None
+  _gis: None
+}
+class arcgis.gis.server.admin._services.Service {
+  _service_manager: None
+  _url: None
+  _currentURL: None
+  _con: None
+}
+class arcgis.gis.server._service._adminfactory.AdminServiceFactory {
+}
+class arcgis.gis.server._service._adminfactory.AdminServiceGen {
+}
+class arcgis.gis.server._service._geodataservice.GeoData {
+}
+class arcgis.gis.Layer {
+  filter: None
+  _time_filter: None
+}
+class arcgis.gis.server._service._layerfactory.ServiceFactory {
+}
+class arcgis.gis.server._service._uploads.Uploads {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server._service._vectortile.VectorTile {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._clusters.Cluster {
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin.parameters.ClusterProtocol {
+  _tcpClusterPort: None
+}
+class arcgis.gis.server.admin._clusters.Clusters {
+  _con: None
+  _url: None
+  _url: None
+  _url: None
+}
+class arcgis.gis.server.admin._data.DataStoreManager {
+  _con: None
+  _con: None
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin._data.Datastore {
+  _path: None
+  _con: None
+  _datastore: None
+  _properties: None
+  _url: None
+}
+class arcgis.gis.server.admin._info.Info {
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin._kml.KML {
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin._logs.LogManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._machines.Machine {
+  _url: None
+  _con: None
+  _currentURL: None
+}
+class arcgis.gis.server.admin._machines.MachineManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._mode.Mode {
+  _url: None
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._security.Role {
+  _security: None
+  _roledict: None
+}
+class arcgis.gis.server.admin._security.RoleManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._security.Security {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._security.User {
+  _security: None
+  _user_dict: None
+}
+class arcgis.gis.server.admin._security.UserManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin.parameters.Extension {
+  _typeName: None
+  _capabilities: None
+  _enabled: None
+  _maxUploadFileSize: None
+  _allowedUploadFileTypes: None
+  _properties: None
+}
+class arcgis.gis.server.admin._services.ItemInforamtionManager {
+}
+class arcgis.gis.server.admin._services.ItemInformationManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._services.Job {
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin._services.JobManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._services.ServiceManager {
+  _sm: None
+  _con: None
+  _url: None
+  _currentURL: None
+  _currentFolder: None
+}
+class arcgis.gis.server.admin._system.ConfigurationStore {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._system.DirectoryManager {
+  _system: None
+}
+class arcgis.gis.server.admin._system.Jobs {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._system.PlatformService {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._system.PlatformServiceManager {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._system.ServerDirectory {
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin._system.ServerProperties {
+  _url: None
+  _url: None
+}
+class arcgis.gis.server.admin._system.SystemManager {
+  _con: None
+  _url: None
+  _url: None
+}
+class arcgis.gis.server.admin._uploads.Uploads {
+  _url: None
+  _url: None
+  _con: None
+  _json_dict: None
+  _json: None
+}
+class arcgis.gis.server.admin._usagereports.Report {
+  _con: None
+  _url: None
+}
+class arcgis.gis.server.admin._usagereports.ReportManager {
+  _url: None
+  _url: None
+  _con: None
+}
+class arcgis.gis.server.admin.administration.Server {
+  _catalog: None
+  _url: None
+  _con: None
+  _con: None
+  _con: None
+}
+class arcgis.gis.server.catalog.ServicesDirectory {
+  _url: None
+  _username: None
+  _password: None
+  _key_file: None
+  _cert_file: None
+  _portal_connection: None
+  _is_agol: None
+  _adminurl: None
+  _adminurl: None
+  _con: None
+  _con: None
+  _con: None
+  _con: None
+  _con: None
+  _gis: None
+  admin: None
+}
+class arcgis.gis.server.admin.administration.SiteManager {
+  _sm: None
+}
+class arcgis.gis.server.sm.ServerManager {
+  _gis: None
+  _portal: None
+  _pa: None
+  _federation: None
+  _server_list: None
+  _catalog_list: None
+}
+class arcgis.gis.sharing._dependency.DependencyManager {
+  _gis: GIS {static}
+  _urls: dict {static}
+  _gis: GIS
+  _urls: None
+}
+class arcgis.gis.sharing._users.Invitation {
+  _url: str {static}
+  _gis: GIS {static}
+  _properties: dict {static}
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.sharing._users.UserInvitationManager {
+  _user: User
+  _gis: GIS
+  _url: None
+}
+class arcgis.gis.tasks._schedule.BaseTask {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.tasks._schedule.Run {
+  _url: str
+  _gis: GIS
+}
+class arcgis.gis.tasks._schedule.TaskManager {
+  _url: str
+  _user: User
+  _gis: GIS
+}
+class arcgis.gis.workflowmanager._workflow_manager.Group {
+  roles: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.Job {
+  job_status: None
+  notes: None
+  diagram_id: None
+  end_date: None
+  due_date: None
+  description: None
+  started_date: None
+  current_steps: None
+  job_template_name: None
+  job_template_id: None
+  extended_properties: None
+  diagram_name: None
+  parent_job: None
+  job_name: None
+  diagram_version: None
+  active_versions: None
+  percent_complete: None
+  priority: None
+  job_id: None
+  created_date: None
+  created_by: None
+  closed: None
+  owned_by: None
+  start_date: None
+  _location: None
+  related_properties: None
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.JobDiagram {
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.JobLocation {
+  geometry: None
+  geometry_type: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.JobManager {
+  _item: None
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.JobTemplate {
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.LookUpTable {
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.SavedSearchesManager {
+  _item: None
+  _gis: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.WMRole {
+  privileges: None
+  roleName: None
+  description: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.WorkflowManager {
+  _item: None
+  _gis: None
+  job_manager: None
+  saved_searches_manager: None
+  _url: None
+}
+class arcgis.gis.workflowmanager._workflow_manager.WorkflowManagerAdmin {
+  _gis: None
+  _url: None
+}
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._federation.Federation
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._license.LicenseManager
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._livingatlas.LivingAtlas
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._logs.Logs
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._machines.Machine
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._machines.Machines
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.EnterpriseGroups
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.EnterpriseUsers
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.OAuth
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.PasswordPolicy
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.SSLCertificate
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.SSLCertificates
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._security.Security
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._site.Site
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.Directory
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.EmailManager
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.Indexer
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.Licenses
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.PortalLicense
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.System
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.WebAdaptor
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._system.WebAdaptors
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin._usage.AGOLUsageReports
+arcgis.gis.admin._base.BasePortalAdmin <|-- arcgis.gis.admin.portaladmin.PortalAdminManager
+arcgis.gis.agoserver._admin.AGOLServerManager *-- arcgis.gis.GIS
+arcgis.gis.agoserver._admin.AGOLServersManager *-- arcgis.gis.GIS
+arcgis.gis.agoserver._api.AGOLServicesDirectory *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._adaptors.WebAdaptorManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._adaptors.WebAdaptorManager
+arcgis.gis.kubernetes._admin._architecture.ArchitectureManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._architecture.ArchitectureManager
+arcgis.gis.kubernetes._admin._content.LanguageManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._content.LanguageManager
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._datastores.DataStore
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._datastores.DataStores
+arcgis.gis.kubernetes._admin._deployment.Deployment *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._deployment.DeploymentManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._deployment.DeploymentManager
+arcgis.gis.kubernetes._admin._deployment.DeploymentProperty *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._jobs.JobManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._jobs.JobManager
+arcgis.gis.kubernetes._admin._license.LicenseManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._license.LicenseManager
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._logs.LogManager
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._mode.Mode
+arcgis.gis.kubernetes._admin._overview.Overview *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._overview.Overview
+arcgis.gis.kubernetes._admin._recovery.Backup *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._recovery.Backup
+arcgis.gis.kubernetes._admin._recovery.BackupStore *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._recovery.BackupStore
+arcgis.gis.kubernetes._admin._recovery.RecoveryManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._recovery.RecoveryManager
+arcgis.gis.kubernetes._admin._security.KubeSecurity *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._security.KubeSecurityCert *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._security.KubeSecurityConfig *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._security.KubeSecurityIngress *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._security.KubeSecuritySAML *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._system.Indexer
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._system.Server
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._system.ServerDefaults
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._system.ServerManager
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._system.SystemManager
+arcgis.gis.kubernetes._admin._tasks.TaskManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._tasks.TaskManager
+arcgis.gis.kubernetes._admin._upgrades.UpgradeManager *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._upgrades.UpgradeManager
+arcgis.gis.tasks._schedule.Task *-- arcgis.gis.GIS
+arcgis.gis.tasks._schedule.BaseTask <|-- arcgis.gis.tasks._schedule.Task
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin._uploads.Uploads
+arcgis.gis.kubernetes._admin._usage.UsageStatistics *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._admin.kadmin.KubernetesAdmin
+arcgis.gis.kubernetes._server._servicedir.KubeServiceDirectory *-- arcgis.gis.GIS
+arcgis.gis.kubernetes._admin._base._BaseKube <|-- arcgis.gis.kubernetes._server._servicedir.KubeServiceDirectory
+arcgis.gis.mission._base.BaseMissionServer <|-- arcgis.gis.mission._ms.MissionServer
+arcgis.gis.nb._services.NBServicesManager *-- arcgis.gis.GIS
+arcgis.gis.nb._snapshot.SnapShot *-- arcgis.gis.Item
+arcgis.gis.nb._system.ContainerNotebook *-- arcgis.gis.GIS
+arcgis.gis.nb._system.DirectoryManager *-- arcgis.gis.GIS
+arcgis.gis.nb._system.SystemManager *-- arcgis.gis.GIS
+arcgis.gis.nb._system.WebAdaptorManager *-- arcgis.gis.GIS
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._services.Service
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server._service._geodataservice.GeoData
+arcgis.gis._GISResource <|-- arcgis.gis.Layer
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server._service._vectortile.VectorTile
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._clusters.Cluster
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._clusters.Clusters
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._data.DataStoreManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._data.Datastore
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._info.Info
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._kml.KML
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._logs.LogManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._machines.Machine
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._machines.MachineManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._mode.Mode
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._security.RoleManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._security.Security
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._security.UserManager
+arcgis.gis.server.admin._services.ItemInformationManager <|-- arcgis.gis.server.admin._services.ItemInforamtionManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._services.ItemInformationManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._services.Job
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._services.JobManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._services.ServiceManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.ConfigurationStore
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.Jobs
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.PlatformService
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.PlatformServiceManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.ServerDirectory
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.ServerProperties
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._system.SystemManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._uploads.Uploads
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._usagereports.Report
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin._usagereports.ReportManager
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.admin.administration.Server
+arcgis.gis.server._common._base.BaseServer <|-- arcgis.gis.server.catalog.ServicesDirectory
+arcgis.gis.sharing._dependency.DependencyManager *-- arcgis.gis.GIS
+arcgis.gis.sharing._dependency.DependencyManager *-- arcgis.gis.GIS
+arcgis.gis.sharing._users.Invitation *-- arcgis.gis.GIS
+arcgis.gis.sharing._users.Invitation *-- arcgis.gis.GIS
+arcgis.gis.sharing._users.UserInvitationManager *-- arcgis.gis.User
+arcgis.gis.sharing._users.UserInvitationManager *-- arcgis.gis.GIS
+arcgis.gis.tasks._schedule.BaseTask *-- arcgis.gis.GIS
+arcgis.gis.tasks._schedule.Run *-- arcgis.gis.GIS
+arcgis.gis.tasks._schedule.BaseTask <|-- arcgis.gis.tasks._schedule.Run
+arcgis.gis.tasks._schedule.TaskManager *-- arcgis.gis.User
+arcgis.gis.tasks._schedule.TaskManager *-- arcgis.gis.GIS
+@enduml

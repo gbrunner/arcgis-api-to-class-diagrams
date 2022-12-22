@@ -1,0 +1,39 @@
+@startuml
+class arcgis.widgets._mapview._raster.local_raster_overlay_manager.LocalRasterOverlayManager {
+  _mapview: None
+}
+class arcgis.widgets._mapview._mapview.MapView {
+  _uuid: None
+  mode: None
+  _hashed_layers: None
+  webmap_item: None
+  webscene_item: None
+  webmap: None
+  _draw_end_handlers: None
+  _click_handlers: None
+  _raster: None
+  _synced_mapviews: None
+  _mapview_uuid_to_dlinks: None
+  _dlinks: None
+}
+class arcgis.widgets._mapview._raster._jupyter_utils.JupyterHorizScrollImageList {
+  _img_el_properties: None
+}
+class arcgis.widgets._mapview._raster.local_raster_overlay_manager.RasterData {
+  img_data: None
+  extent: dict
+  id: str
+}
+class arcgis.widgets._mapview._raster.local_raster_overlay_manager.RasterOverlay {
+  id: str
+  img_url: str
+  extent: dict
+  opacity: float
+}
+class arcgis.widgets._mapview._traitlets_extension.ObservableDict {
+}
+class arcgis.widgets._mapview._traitlets_extension.observabledict {
+}
+class arcgis.widgets._mapview._traitlets_extension.observablelist {
+}
+@enduml

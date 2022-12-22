@@ -1,0 +1,496 @@
+@startuml
+class arcgis.realtime.stream_layer.StreamLayer {
+  _streamtoken: None
+  _streamurl: None
+  _out_sr: None
+  filter: None
+  _on_features: None
+  _on_disconnect: None
+  _on_error: None
+  service: None
+}
+class arcgis.realtime.velocity._bigdata_analytics.BigDataAnalytics {
+  _gis: GIS
+  _util: _Util
+  _item: Optional[Dict]
+  _id: None
+}
+abstract class arcgis.realtime.velocity._task.Task {
+}
+class arcgis.realtime.velocity._util._Util {
+  _gis: GIS
+  _base_url: str
+  _params: None
+}
+class arcgis.realtime.velocity._feed.Feed {
+  _gis: GIS
+  _util: _Util
+  _item: Optional[Dict]
+  _id: None
+}
+class arcgis.realtime.velocity._realtime_analytics.RealTimeAnalytics {
+  _gis: GIS
+  _util: _Util
+  _item: Optional[Dict]
+  _id: None
+}
+class arcgis.realtime.velocity._reserved_fields._ReservedFields {
+  _reserved_names_gdb: typing.ClassVar[typing.List[str]] {static}
+  _reserved_names_fs: typing.ClassVar[typing.List[str]] {static}
+  _reserved_names_service_query: typing.ClassVar[typing.List[str]] {static}
+  _reserved_names_es: typing.ClassVar[typing.List[str]] {static}
+  _all_reserved_names_lower: typing.ClassVar[typing.List[str]] {static}
+}
+class arcgis.realtime.velocity.bigdata_analytics_manager.BigDataAnalyticsManager {
+  _gis: GIS
+  _util: None
+}
+class arcgis.realtime.velocity.feeds._feed_template._FeedTemplate {
+  label: str
+  description: str
+  _name: typing.ClassVar[str]
+  _fields: dict
+}
+class arcgis.realtime.velocity.feeds.aws_iot.AWSIoT {
+  endpoint: str
+  topic: str
+  qos_level: int
+  access_key_id: typing.Optional[str]
+  secret_access_key: typing.Optional[str]
+  session_token: typing.Optional[str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.input.format.DelimitedFormat {
+  name: typing.ClassVar[str]
+  _BUILD_GEOMETRY_FROM_FIELDS_KEY: str
+  _X_FIELD_KEY: str
+  _Y_FIELD_KEY: str
+  _HAS_Z_FIELD_KEY_KEY: str
+  _Z_FIELD_KEY: str
+  _Z_UNIT_KEY: str
+  _GEOMETRY_FIELD_KEY: str
+  _GEOMETRY_FIELD_FORMAT_KEY: str
+  _DATE_FORMAT_KEY: str
+  _RECORD_TERMINATOR_KEY: str
+  _FIELD_DELIMITER_KEY: str
+  _HAS_HEADER_ROW: str
+  record_terminator: typing.Optional[str]
+  field_delimiter: typing.Optional[str]
+  has_header_row: typing.Optional[bool]
+  date_format: typing.Optional[str]
+  build_geometry_from_fields: typing.Optional[bool]
+  x_field: typing.Optional[str]
+  y_field: typing.Optional[str]
+  has_z_field: typing.Optional[bool]
+  z_field: typing.Optional[str]
+  z_unit: typing.Optional[int]
+  geometry_field: typing.Optional[str]
+  geometry_field_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.input.format.EsriJsonFormat {
+  name: typing.ClassVar[str]
+  _DATE_FORMAT_KEY: str
+  date_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.input.format.GeoJsonFormat {
+  name: typing.ClassVar[str]
+  _DATE_FORMAT_KEY: str
+  date_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.input.format.JsonFormat {
+  name: typing.ClassVar[str]
+  _BUILD_GEOMETRY_FROM_FIELDS_KEY: str
+  _X_FIELD_KEY: str
+  _Y_FIELD_KEY: str
+  _HAS_Z_FIELD_KEY_KEY: str
+  _Z_FIELD_KEY: str
+  _Z_UNIT_KEY: str
+  _GEOMETRY_FIELD_KEY: str
+  _GEOMETRY_FIELD_FORMAT_KEY: str
+  _DATE_FORMAT_KEY: str
+  _ROOT_NODE_KEY: str
+  _FLATTEN_KEY: str
+  _FIELD_FLATTENING_EXEMPTIONS_KEY: str
+  root_node: typing.Optional[str]
+  flatten: typing.Optional[bool]
+  field_flattening_exemptions: typing.Optional[str]
+  date_format: typing.Optional[str]
+  build_geometry_from_fields: typing.Optional[bool]
+  x_field: typing.Optional[str]
+  y_field: typing.Optional[str]
+  has_z_field: typing.Optional[bool]
+  z_field: typing.Optional[str]
+  z_unit: typing.Optional[int]
+  geometry_field: typing.Optional[str]
+  geometry_field_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry {
+  geometry_field: str
+  geometry_type: str
+  geometry_format: str
+  wkid: int
+}
+class arcgis.realtime.velocity.feeds.time.TimeInstant {
+  time_field: str
+  date_format: str
+}
+class arcgis.realtime.velocity.feeds.time.TimeInterval {
+  interval_start_field: str
+  interval_end_field: str
+  date_format: str
+}
+class arcgis.realtime.velocity.velocity.Velocity {
+  _gis: GIS
+  _url: str
+}
+class arcgis.realtime.velocity.input.format.XMLFormat {
+  name: typing.ClassVar[str]
+  _BUILD_GEOMETRY_FROM_FIELDS_KEY: str
+  _X_FIELD_KEY: str
+  _Y_FIELD_KEY: str
+  _HAS_Z_FIELD_KEY_KEY: str
+  _Z_FIELD_KEY: str
+  _Z_UNIT_KEY: str
+  _GEOMETRY_FIELD_KEY: str
+  _GEOMETRY_FIELD_FORMAT_KEY: str
+  _DATE_FORMAT_KEY: str
+  _ROOT_NODE_KEY: str
+  _FLATTEN_KEY: str
+  _FIELD_FLATTENING_EXEMPTIONS_KEY: str
+  root_node: typing.Optional[str]
+  flatten: typing.Optional[bool]
+  field_flattening_exemptions: typing.Optional[str]
+  date_format: typing.Optional[str]
+  build_geometry_from_fields: typing.Optional[bool]
+  x_field: typing.Optional[str]
+  y_field: typing.Optional[str]
+  has_z_field: typing.Optional[bool]
+  z_field: typing.Optional[str]
+  z_unit: typing.Optional[int]
+  geometry_field: typing.Optional[str]
+  geometry_field_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.feeds.geometry.XYZGeometry {
+  x_field: str
+  y_field: str
+  wkid: int
+  z_field: str
+  z_unit: str
+}
+class arcgis.realtime.velocity.feeds.geometry._HasGeometry {
+}
+class arcgis.realtime.velocity.feeds.time._HasTime {
+}
+class arcgis.realtime.velocity.feeds.azure_event_hub.AzureEventHub {
+  shared_access_key_name: str
+  shared_access_key: str
+  event_hub_endpoint: str
+  event_hub_entity_path: str
+  consumer_group: typing.Optional[str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.azure_service_bus.AzureServiceBus {
+  topic_name: str
+  subscription_name: str
+  shared_access_key_name: str
+  shared_access_key: str
+  endpoint: str
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.cisco_edge_intelligence.CiscoEdgeIntelligence {
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.mqtt.MQTT {
+  host: str
+  port: int
+  topic: str
+  qos_level: int
+  username: typing.Optional[str]
+  password: typing.Optional[str]
+  client_id: typing.Optional[str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.feature_layer.FeatureLayer {
+  query: str
+  fields: str
+  outSR: int
+  url: typing.Optional[str]
+  portal_item_id: typing.Optional[str]
+  extent: typing.Optional[typing.Dict[str, typing.Any]]
+  time_stamp_field: typing.Optional[str]
+  track_id_field: typing.Optional[str]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  run_interval: RunInterval
+  data_format: typing.Any
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.run_interval.RunInterval {
+  cron_expression: str
+  timezone: str
+}
+class arcgis.realtime.velocity.feeds.geometry._Unit {
+  _distance: typing.ClassVar[typing.Dict[str, int]]
+}
+class arcgis.realtime.velocity.feeds.geotab.Geotab {
+  url: str
+  database: str
+  username: str
+  password: str
+  groups: typing.Optional[str]
+  diagnostics_ids: typing.Optional[str]
+  data_format: typing.Optional[arcgis.realtime.velocity.input.format.JsonFormat]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  run_interval: RunInterval
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.http_authentication_type.BasicAuth {
+  _auth_type: typing.ClassVar[str]
+  username: str
+  password: str
+}
+class arcgis.realtime.velocity.http_authentication_type.CertificateAuth {
+  _auth_type: typing.ClassVar[str]
+  pfx_file_http_location: str
+  password: str
+}
+class arcgis.realtime.velocity.feeds.http_poller.HttpPoller {
+  url: str
+  http_method: str
+  http_auth_type: typing.Union[arcgis.realtime.velocity.http_authentication_type.NoAuth, arcgis.realtime.velocity.http_authentication_type.BasicAuth, arcgis.realtime.velocity.http_authentication_type.CertificateAuth]
+  url_params: Dict[builtins.str, builtins.str]
+  http_headers: Dict[builtins.str, builtins.str]
+  enable_long_polling: bool
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  run_interval: RunInterval
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.http_authentication_type.NoAuth {
+  _auth_type: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.http_receiver.HttpReceiver {
+  authentication_type: str
+  sample_message: str
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.http_simulator.HttpSimulator {
+  url: str
+  field_separator: str
+  features_per_execution: int
+  interval_for_sending_events: int
+  repeat_simulation: bool
+  time_field_index: int
+  convert_to_current_time: bool
+  data_format: typing.Optional[arcgis.realtime.velocity.input.format.DelimitedFormat]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.kafka.Kafka {
+  brokers: str
+  topics: str
+  authentication: typing.Union[arcgis.realtime.velocity.feeds.kafka_authentication_type.NoAuth, arcgis.realtime.velocity.feeds.kafka_authentication_type.SASLPlain]
+  consumer_group_id: typing.Optional[str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.kafka_authentication_type.NoAuth {
+  _auth_type: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.kafka_authentication_type.SASLPlain {
+  _auth_type: typing.ClassVar[str]
+  username: str
+  password: str
+}
+class arcgis.realtime.velocity.feeds.kafka_authentication_type._KafkaAuthenticationType {
+  _auth_type: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.rabbit_mq.RabbitMQ {
+  host: str
+  port: int
+  use_ssl: bool
+  prefetch_count: int
+  virtual_host: typing.Optional[str]
+  username: typing.Optional[str]
+  password: typing.Optional[str]
+  queue_name: typing.Optional[str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds_manager.FeedsManager {
+  _gis: GIS
+  _util: None
+}
+class arcgis.realtime.velocity.input.format.GeoRssFormat {
+  name: typing.ClassVar[str]
+  _DATE_FORMAT_KEY: str
+  date_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.feeds.rss.RSS {
+  rss_url: str
+  http_auth_type: typing.Union[arcgis.realtime.velocity.http_authentication_type.NoAuth, arcgis.realtime.velocity.http_authentication_type.BasicAuth, arcgis.realtime.velocity.http_authentication_type.CertificateAuth]
+  http_headers: Dict[builtins.str, builtins.str]
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.RssFormat, arcgis.realtime.velocity.input.format.GeoRssFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  run_interval: RunInterval
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.input.format.RssFormat {
+  name: typing.ClassVar[str]
+  _BUILD_GEOMETRY_FROM_FIELDS_KEY: str
+  _X_FIELD_KEY: str
+  _Y_FIELD_KEY: str
+  _HAS_Z_FIELD_KEY_KEY: str
+  _Z_FIELD_KEY: str
+  _Z_UNIT_KEY: str
+  _GEOMETRY_FIELD_KEY: str
+  _GEOMETRY_FIELD_FORMAT_KEY: str
+  _DATE_FORMAT_KEY: str
+  date_format: typing.Optional[str]
+  build_geometry_from_fields: typing.Optional[bool]
+  x_field: typing.Optional[str]
+  y_field: typing.Optional[str]
+  has_z_field: typing.Optional[bool]
+  z_field: typing.Optional[str]
+  z_unit: typing.Optional[int]
+  geometry_field: typing.Optional[str]
+  geometry_field_format: typing.Optional[str]
+}
+class arcgis.realtime.velocity.http_authentication_type._HttpAuthenticationType {
+  _auth_type: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.stream_layer.StreamLayer {
+  portal_item_id: str
+  query: str
+  fields: str
+  outSR: int
+  extent: typing.Optional[typing.Dict[str, typing.Any]]
+  track_id_field: typing.Optional[str]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  data_format: typing.Any
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.verizon_connect_reveal.VerizonConnectReveal {
+  username: str
+  password: str
+  data_format: typing.Optional[arcgis.realtime.velocity.input.format.JsonFormat]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.feeds.web_socket.WebSocket {
+  url: str
+  data_format: typing.Union[arcgis.realtime.velocity.input.format.EsriJsonFormat, arcgis.realtime.velocity.input.format.GeoJsonFormat, arcgis.realtime.velocity.input.format.JsonFormat, arcgis.realtime.velocity.input.format.DelimitedFormat, arcgis.realtime.velocity.input.format.XMLFormat, NoneType]
+  track_id_field: typing.Optional[str]
+  geometry: typing.Union[arcgis.realtime.velocity.feeds.geometry.XYZGeometry, arcgis.realtime.velocity.feeds.geometry.SingleFieldGeometry, NoneType]
+  time: typing.Union[arcgis.realtime.velocity.feeds.time.TimeInstant, arcgis.realtime.velocity.feeds.time.TimeInterval, NoneType]
+  _name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.input.format._FormatBase {
+  name: typing.ClassVar[str]
+}
+class arcgis.realtime.velocity.realtime_analytics_manager.RealTimeAnalyticsManager {
+  _gis: GIS
+  _util: None
+}
+arcgis.realtime.velocity._bigdata_analytics.BigDataAnalytics *-- arcgis.realtime.velocity._util._Util
+arcgis.realtime.velocity._task.Task <|-- arcgis.realtime.velocity._bigdata_analytics.BigDataAnalytics
+arcgis.realtime.velocity._feed.Feed *-- arcgis.realtime.velocity._util._Util
+arcgis.realtime.velocity._task.Task <|-- arcgis.realtime.velocity._feed.Feed
+arcgis.realtime.velocity._realtime_analytics.RealTimeAnalytics *-- arcgis.realtime.velocity._util._Util
+arcgis.realtime.velocity._task.Task <|-- arcgis.realtime.velocity._realtime_analytics.RealTimeAnalytics
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.aws_iot.AWSIoT
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.aws_iot.AWSIoT
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.aws_iot.AWSIoT
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.DelimitedFormat
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.EsriJsonFormat
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.GeoJsonFormat
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.JsonFormat
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.XMLFormat
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.azure_event_hub.AzureEventHub
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.azure_event_hub.AzureEventHub
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.azure_event_hub.AzureEventHub
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.azure_service_bus.AzureServiceBus
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.azure_service_bus.AzureServiceBus
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.azure_service_bus.AzureServiceBus
+arcgis.realtime.velocity.feeds.mqtt.MQTT <|-- arcgis.realtime.velocity.feeds.cisco_edge_intelligence.CiscoEdgeIntelligence
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.mqtt.MQTT
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.mqtt.MQTT
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.mqtt.MQTT
+arcgis.realtime.velocity.feeds.feature_layer.FeatureLayer *-- arcgis.realtime.velocity.feeds.run_interval.RunInterval
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.feature_layer.FeatureLayer
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.feature_layer.FeatureLayer
+arcgis.realtime.velocity.feeds.geotab.Geotab *-- arcgis.realtime.velocity.feeds.run_interval.RunInterval
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.geotab.Geotab
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.geotab.Geotab
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.geotab.Geotab
+arcgis.realtime.velocity.http_authentication_type._HttpAuthenticationType <|-- arcgis.realtime.velocity.http_authentication_type.BasicAuth
+arcgis.realtime.velocity.http_authentication_type._HttpAuthenticationType <|-- arcgis.realtime.velocity.http_authentication_type.CertificateAuth
+arcgis.realtime.velocity.feeds.http_poller.HttpPoller *-- arcgis.realtime.velocity.feeds.run_interval.RunInterval
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.http_poller.HttpPoller
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.http_poller.HttpPoller
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.http_poller.HttpPoller
+arcgis.realtime.velocity.http_authentication_type._HttpAuthenticationType <|-- arcgis.realtime.velocity.http_authentication_type.NoAuth
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.http_receiver.HttpReceiver
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.http_receiver.HttpReceiver
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.http_receiver.HttpReceiver
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.http_simulator.HttpSimulator
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.http_simulator.HttpSimulator
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.http_simulator.HttpSimulator
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.kafka.Kafka
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.kafka.Kafka
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.kafka.Kafka
+arcgis.realtime.velocity.feeds.kafka_authentication_type._KafkaAuthenticationType <|-- arcgis.realtime.velocity.feeds.kafka_authentication_type.NoAuth
+arcgis.realtime.velocity.feeds.kafka_authentication_type._KafkaAuthenticationType <|-- arcgis.realtime.velocity.feeds.kafka_authentication_type.SASLPlain
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.rabbit_mq.RabbitMQ
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.rabbit_mq.RabbitMQ
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.rabbit_mq.RabbitMQ
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.GeoRssFormat
+arcgis.realtime.velocity.feeds.rss.RSS *-- arcgis.realtime.velocity.feeds.run_interval.RunInterval
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.rss.RSS
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.rss.RSS
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.rss.RSS
+arcgis.realtime.velocity.input.format._FormatBase <|-- arcgis.realtime.velocity.input.format.RssFormat
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.stream_layer.StreamLayer
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.stream_layer.StreamLayer
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.verizon_connect_reveal.VerizonConnectReveal
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.verizon_connect_reveal.VerizonConnectReveal
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.verizon_connect_reveal.VerizonConnectReveal
+arcgis.realtime.velocity.feeds._feed_template._FeedTemplate <|-- arcgis.realtime.velocity.feeds.web_socket.WebSocket
+arcgis.realtime.velocity.feeds.time._HasTime <|-- arcgis.realtime.velocity.feeds.web_socket.WebSocket
+arcgis.realtime.velocity.feeds.geometry._HasGeometry <|-- arcgis.realtime.velocity.feeds.web_socket.WebSocket
+@enduml
